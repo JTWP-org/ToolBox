@@ -8,4 +8,4 @@ apiPATH="IAMNOTAPATH"
 
 curl -X GET "${apiPATH}/games/${gameID}/mods/${1}?api_key=${apiKEY}"   -H 'Accept: application/json' | jq . > rawAPI.tmp
 
-cat rawAPI.tmp | jq '.media.images[0].thumb_320x180, .name'
+cat rawAPI.tmp | jq '.logo.original, .name'
